@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*DEĞİŞKENLER*/
+:root{
+    --green:#16ff00;
+    --white:#f5f5f5;
+    --gray:#cdcccc;
+    --black:#121212;
+}
+
+/* Genel Tanımlama ve Stil Sıfırlama */
+a{
+    text-decoration: none;
+    color:var(--white);
+}
+h1,
+h2,
+h3,
+h4{
+    font-family: "Inter";
+    color:var(--white);
+}
+
+p{
+    font-family: "Poppins";
+    color: var(--gray);
+}
+
+button{
+    font-family: "Poppins";
+    border: none;
+    cursor:pointer;
+    padding: 7px 20px;
+    font-size:16px;
+    border-radius: 12px;
+    transition:all .3s;
+
+}
+button:hover{
+    scale:0.95;
+    box-shadow: 2px 2px 20px var(--gray);
+    transition:all .4s;
+}
+section{
+    padding:30px; 
+}
+.destiny{
+    font-family: 'Bebas Neue';
+}
+.destiny span{
+    color:var(--green);
+}
+/* Ana Stiller */
+body{
+    background: var(--black);
+    overflow-x: hidden;
+    font-family: "Poppins";
+}
+
+
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* position:fixed;
+    top:0; */
+    position:sticky;
+    top:0;
+    background: var(--black);
+    z-index: 999;
+}
+header .nav-btn{
+    display: none;
+}
+header nav{
+    display: flex;
+    gap:20px;
+}
+
+header nav .special-link{
+    color:var(--green);
+}
+
+/* FOOTER */
+footer{
+    margin-top: 400px; /*silincek*/
+    padding:20px;
+
+
+}
+footer .footer-links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+}
+footer .footer-links .link-area{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
+}
+footer form{
+    display: flex;
+    gap:20px;
+}
+footer form input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-height: 50px;
+    border:none;
+}
+footer form button{
+    background-color: var(--green);
+    /* white-space:nowrap ile display flexde yaptığımıza benzer şekilde 
+    kelimelerin alt alta ya da yan yana gelmesini sağlar.nowrap alt satıra geçmesini engeller.*/
+    white-space: nowrap;
+    border:none;
+
+}
+footer .bottom{
+    text-align: center;
+    margin-top:50px;
+    border-top: 1px solid var(--gray);
+    padding: 20px;
+}
+
+/* HERO ALANI */
+#hero{
+    height:50vh;
+    background:url(images/back.jpg);
+    background-size: cover;
+    background-attachment: fixed; /*arka planda görüntüsü sayfanın geri kalanından bağımsız olarak sabitlenir*/
+    display: flex;
+    align-items: center;
+}
+#hero-inner{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    padding: 20px;
+    margin-left:20px;
+    text-align: justify;
+    /* cam efekti */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+#hero-inner h1{
+    color:var(--green);
+
+}
+#hero-inner p{
+    text-shadow: 2px 2px 10px black;
+    color:#f5f5f5;
+
+}
+#hero-inner button:nth-child(1){
+    background-color: var(--green);
+}
+    
+/* PENCERELER ALANI */
+#window-section{
+    display: flex;
+    justify-content: space-between;
+    gap:100px;
+}
+.window-section-info{
+    max-width: 600px;
+    display: grid;
+    gap:30px;
+}
+.windows{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:50px;
+}
+.windows .window{
+    min-width: 200px;
+    height:400px;
+    background: url(images/sec2.jpg);
+    background-attachment:fixed;
+    background-size:cover;
+    border-radius: 40px 40px 0 0 ;
+    
+}
+.windows .window:nth-child(2){
+    border-radius:40px;
+}
+.window-section-info button{
+    max-height: 60px;
+}
+/* KARTLAR */
+#cards-section{
+
+}
+.card-section-info{
+    max-width:600px;
+    display: grid;
+    gap:40px;
+}
+.cards{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+}
+.card{
+    border:1px solid gray;
+    display: grid;
+    gap:20px;
+    padding: 20px;
+    border-radius:10px;
+    margin-top: 50px;
+}
+.card video{
+    width:200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSİVE YAPILAR */
+/* 1200px aşağısında ki cihazlar için geçerlidir*/
+@media (max-width:1200px){
+    /* PENCERELER ALANI */
+    #window-section{
+        flex-direction: column;
+        align-items: center;
+    }
+    .windows .window{
+        height: 300px;
+    }
+}
+
+/* 1000px aşağısında ki cihazlar için geçerlidir*/
+@media (max-width:1000px){
+    footer .footer-links{
+        grid-template-columns:repeat(2,1fr);
+        row-gap:50px;
+        padding: 40px;
+        column-gap: 100px;
+    }
+     footer .footer-links .link-area:nth-child(even){/* even:tek odd:çift olanları sağa yaslamak için kullanırız.*/
+        /* text-align:end; */
+    } 
+    footer form{
+        flex-direction: column;
+        /* align-items: end; */
+    }
+    footer form input{
+        max-width:200px;
+        height: 40px;
+    }
+    footer form button{
+        max-width: 100px;
+
+    }
+    /* KARTLAR ALANI */
+    .cards{
+        grid-template-columns: 1fr;
+        place-items:center; /*align-items:center ve justify-content:center özelliklerini aynı değere atayarak kullanır.*/
+    }
+    .card{
+        max-width: 400px;
+    }
+}
+/* 800px aşağısında ki cihazlar için geçerlidir*/
+@media (max-width:800px){
+    header nav{
+        display: none;
+    }
+    header .nav-btn{
+        display: block;
+    }
+    .toggle{ /*nav alanını 800px ve aşağısında tanıttık*/
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right:5px;
+        top:70px;
+        background: #585858;
+        padding:20px;
+        border-radius: 15px;
+    }
+    /* HERO ALANI */
+    #hero{
+        align-items: center;
+        justify-content: center;
+    }
+    #hero-inner{
+        margin:40px;
+        text-align: center;
+    }
+}
+
+/*  500px aşağısında ki cihazlar için geçerlidir */
+@media (max-width:500px){
+    footer{
+        padding: 5px;
+    }
+    footer .footer-links{
+        padding:5px;   
+        column-gap: 50px;
+    }
+}
+/* 400px aşağısında ki cihazlar için geçerlidir SE*/
+@media (max-width:400px){
+    footer{
+        font-size: 13px;
+    }
+    footer .footer-links{
+        column-gap: 25px;
+    }
+    /* HERO ALANI */
+    #hero-inner{
+        max-width: 200px;
+        font-size: 12px;
+        padding: 10px;
+    }
+    #hero-inner h1{
+        font-size: 15px;
+    }
+    #hero-inner p{
+        font-size: 10px;
+    }
+    #hero-inner button{
+        padding: 5px 15px;
+        font-size: 10px;
+        
+    }
+}
+/*1000px den yüksek ise  */
+@media (min-width:1000px){
+    section{
+        padding: 100px;
+    }
+}
