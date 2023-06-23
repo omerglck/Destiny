@@ -7,9 +7,11 @@ HTML5 CSS3 JavaScript kullanıldı.
 
 Full responsive yapı kullanıldı.
 
+### Demo
 
 
 
 
 
-<img src="screen.gif">
+
+![](screen.gif)
