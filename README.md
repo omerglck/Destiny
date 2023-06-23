@@ -9,6 +9,8 @@ Full responsive yapı kullanıldı.
 
 ### Demo
 
+https://destiny10.netlify.app/
+
 
 
 
