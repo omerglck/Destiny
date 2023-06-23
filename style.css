@@ -14,6 +14,9 @@
 }
 
 /* Genel Tanımlama ve Stil Sıfırlama */
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
     color:var(--white);
@@ -90,7 +93,7 @@ header nav .special-link{
 
 /* FOOTER */
 footer{
-    margin-top: 400px; /*silincek*/
+     margin-top: 100px;/*silincek*/
     padding:20px;
 
 
@@ -227,6 +230,255 @@ footer .bottom{
 .card video{
     width:200px;
 }
+/* LİSTE ALANI */
+#list-sec{
+    margin:50px 0;
+}
+#list-sec .list-sec-info{
+    display: flex;
+    justify-content: space-between;
+    gap:40px;
+
+}
+#list-sec .list-sec-info h2,
+.list-sec-info p{
+    max-width: 400px;
+
+}   
+
+#list-sec ul{
+
+}
+#list-sec ul li{
+    display: flex;
+    justify-content: space-between;
+    margin-top:4px;
+    border-bottom: 1px solid gray;
+    padding: 40px;
+    align-items: center;
+}
+
+#list-sec ul li span{
+    color:gray;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom:5px;
+}
+#list-sec ul li img{
+    width:50px;
+}
+
+/*! PROJELER SAYFASI  */
+.welcome{
+    max-width: 1300px;
+    padding: 100px;
+    font-size:55px;
+    background-image: linear-gradient(155deg,
+    #00DBDE 15%,
+    #9e0699 42.5%,
+    #00fbff 100%);
+    /* arka planı yazıya aktarmak için kullandık */
+    -webkit-background-clip:text;
+    /* yazıya aktardığımız arka planı göstermek için kullandık */
+    -webkit-text-fill-color: transparent;
+}
+#what-section{
+    display: flex;
+    justify-content: space-between;
+    gap:40px;
+}
+#what-section .info{
+    max-width: 400px;
+}
+
+#what-section .info h1{
+    margin-bottom: 50px;
+}
+#what-section .cards{
+    display: flex;
+    gap:100px;
+    
+
+}
+#what-section .what-card {
+    min-width: 200px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    text-align: center;
+    background-color: #323443;
+    border-radius: 10px;
+    padding: 30px 20px;
+    position: relative;
+}
+#what-section .what-card img{
+    position: absolute;
+    width: 50px;
+    top:-50px;
+    
+}
+#what-section .what-card h3{
+    text-align: center;
+    padding: 20px;
+}
+#what-section .what-card p{
+    text-align: justify;
+    max-width: 400px;
+}
+/* PROJELER ALANI */
+#projects-section{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+#projects-section .project{
+    display: flex;
+    gap:30px;
+}
+.project-img{
+    display: flex;
+    align-items: end;
+    background:#323443;
+    padding: 40px 60px 0;
+    display: flex;
+    position: relative;
+}
+.project-img:hover{
+    background-image: linear-gradient(135deg, #FF3CAC 0%, #70006c 24%, #2B86C5 64%, #21d89a 100%);
+
+}
+.project-img img{
+    cursor: pointer;
+}
+.project-img .arrow-icon{
+    position: absolute;
+    background-color: #494a57;
+    right:5px;
+    top:5px;
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.project-info{
+    display: flex;
+    flex-direction:column;
+    gap:30px;
+    max-width: 700px;
+}
+/*! TAKIM SAYFASI */
+#count-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:50px;
+}
+
+.count-sec-left{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+}
+.count-sec-left .counter{
+    padding: 20px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.counter .boxes{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 20px;
+    margin-top:20px;
+}
+.counter .boxes .box{
+    background-color: rgb(0,0,21);
+    border-radius: 7px;
+    padding: 10px;
+    text-align: center;
+}
+.count-sec-left .buttons{
+    display: flex;
+    gap:20px;
+
+}
+.count-sec-left .buttons button{
+    background-color:transparent;
+    color:var(--white);
+    border:1px solid var(--green);
+}
+.count-sec-left .buttons button:hover{
+    background-color: var(--green);
+    box-shadow: none;
+    color: var(--black);
+}
+.count-sec-right img{
+    border-radius: 10px;
+    max-width: 500px;
+}
+/* RESİMLER ALANI */
+#images-section{    
+    display: flex;
+    gap:20px;
+    justify-content: space-between;
+}
+.img-wrapper{
+    position: relative;
+}
+.img-wrapper img{
+    width: 400px;
+    border-radius: 20px;
+}
+.img-wrapper h1{
+    position: absolute;
+    bottom:0;
+    width: 100%;/*Bunu vermemizin nedeni h1 etiketinin içindeki yazı kadar yer kaplamasıydı ve bundan dolayı resmi ortalamıyordu.*/
+    text-align: center;
+    padding: 20px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+/* BAĞIŞ ALANI */
+#donate-section{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.donate-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.donate-section-content{
+    display: grid;
+    grid-template-columns: repeat(4,200px);
+    justify-content: center;
+    gap:40px;
+}
+.donate-people{
+    display: flex;
+    gap:10px;
+    background: rgb(49, 0, 49);
+    color:white;
+    padding: 10px;
+    border-radius: 45px;
+}
+.donate-people img{
+    width: 50px;
+    border-radius: 50%;
+}
 
 
 
@@ -271,22 +523,19 @@ footer .bottom{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* RESPONSİVE YAPILAR */
+/*! RESPONSİVE YAPILAR */
+/* 1500px aşağısında ki cihazlar için geçerlidir */
+@media (max-width:1500px){
+    #images-section{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 40px;
+    }
+    #images-section img{
+        width:400px;
+    }
+}
 /* 1200px aşağısında ki cihazlar için geçerlidir*/
 @media (max-width:1200px){
     /* PENCERELER ALANI */
@@ -297,6 +546,32 @@ footer .bottom{
     .windows .window{
         height: 300px;
     }
+    /* WHAT-SECTİON */
+    #what-section{
+        flex-direction: column;
+        gap: 50px;
+    }
+    #what-section .info{
+        display: flex;
+        max-width: unset;
+        gap:40px
+    }
+    #what-section .info h1{
+        white-space: nowrap;
+    }
+    /* PROJELER ALANI */
+    #projects-section .project{
+        flex-direction: column-reverse; /*1200 px altında resim alanıyla info alanının yerini değiştirmek için flex-direction:column-reverse 
+        ya da ilk önce gelmesini istediğimiz alanı order:-1 ile öne çıkarabiliriz*/
+    }
+    /* .project-info{
+        order:-1
+    } */
+    #projects-section .project-img{
+        justify-content: center;
+        padding: 20px 100px 0;
+    }
+    
 }
 
 /* 1000px aşağısında ki cihazlar için geçerlidir*/
@@ -331,6 +606,30 @@ footer .bottom{
         max-width: 400px;
         
     }
+    /* PROJELER SAYFASI */
+    .welcome{
+        padding: 100px 20px;
+        font-size: 40px;
+    }
+    /* TAKIM ALANI */
+    #count-section{
+        flex-direction: column-reverse;
+    }
+    .count-sec-right img{
+        max-width: 300px;
+    }
+    .count-sec-left .buttons{
+        font-size: 15px;
+        justify-content: space-around;
+    }
+    /* FOTOĞRAFLAR ALANI */
+    #images-section img{
+        width:300px;
+    }
+    /* BAĞIŞ ALANI */
+    .donate-section-content{
+        grid-template-columns: repeat(3,200px);
+    }
 }
 /* 800px aşağısında ki cihazlar için geçerlidir*/
 @media (max-width:800px){
@@ -359,6 +658,32 @@ footer .bottom{
         margin:40px;
         text-align: center;
     }
+    /* LİSTE ALANI */
+    #list-sec{
+        padding:30px;
+    }
+    #list-sec .list-sec-info{
+        flex-direction: column;
+        /* align-items: center; kullanılabilir ortalamak için */
+    
+    }
+    #list-sec .list-sec-info h2,.list-sec-info p{
+        /* bu stile hiç değer ataması yapılmamış gibi davranır */
+        max-width: unset;
+    }
+    /* WHAT-SECTİON */
+    #what-section .info{
+        flex-direction: column;
+        gap:0;
+    }
+    #what-section .cards{
+        gap:40px;
+    }
+    /* BAĞIŞ ALANI */
+    .donate-section-content{
+        grid-template-columns: repeat(2,200px);
+    }
+
 }
 
 /*  500px aşağısında ki cihazlar için geçerlidir */
@@ -370,6 +695,32 @@ footer .bottom{
         padding:5px;   
         column-gap: 50px;
     }
+    /* WHAT_SECTİON CARD */
+    #what-section .cards{
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+        margin-top: 15px;
+    }
+    #what-section .what-card {
+        padding: 10px 5px;
+    }
+    #what-section .what-card h3{
+        padding: 0;
+    }
+    /* PROJELER ALANI */
+    .project-img{
+        padding: 0 30px !important;
+    }
+    .project-img img{
+        width: 100%;
+    }
+    .project-info{
+        margin-top: 70px;
+    }
+
+
+
 }
 /* 400px aşağısında ki cihazlar için geçerlidir SE*/
 @media (max-width:400px){
@@ -396,10 +747,35 @@ footer .bottom{
         font-size: 10px;
         
     }
+    /* TAKIM SAYFASI */
+    .count-sec-right img{
+        max-width: 200px;
+    }
+    .count-sec-left .counter{
+        padding: 10px;
+        font-size: 10px;
+    }
+    .count-sec-left h1{
+        font-size: 15px;
+    }
+    .count-sec-left .buttons{
+        white-space: nowrap;
+    }
 }
-/*1000px den yüksek ise  */
+/*1000px den büyük ise  */
 @media (min-width:1000px){
     section{
         padding: 100px;
     }
+    /* LİSTE ALANI */
+    
 }
+/* 1550 px den büyük ise */
+@media (min-width:1550px){
+    /* LİSTE ALANI */
+    #list-sec .list-sec-info{
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+}
+    
